@@ -3,10 +3,19 @@ pipeline{
     
     stages{
        
-       stage('Pull code from BitBucket'){
+       stage('Pull code from git'){
            
            steps{
-               //checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/martinlindhe/wmi_exporter']]])
+                git url: 'https://github.com/buraashok/ashok-1.git'
+               
+                ///checkout([$class: 'GitSCM', branches: [[name: '']], 
+                ///doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', 
+                
+                
+                //url: 'https://github.com/martinlindhe/wmi_exporter']]])
+               
+               /// url: 'https://github.com/buraashok/ashok-1']]])
+                
                 echo "All branches"
            }
        }
